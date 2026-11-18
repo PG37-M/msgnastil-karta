@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>МСГ НАСТИЛ — реализованные проекты (прототип карты)</title>
+<link rel="stylesheet" href="assets/msg-map.css?v=8">
+<style>
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: #f3f6fb; color: #0a1f44; }
+  .stub { padding: 56px 24px; text-align: center; color: #5c6f93; }
+  .stub h1 { margin: 0 0 8px; font-size: 28px; color: #0a1f44; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+  .msgmap-section { padding: 40px 0 64px; }
+  .msgmap-head { margin-bottom: 22px; }
+  .msgmap-head h2 { margin: 0 0 8px; font-size: clamp(26px, 4vw, 40px); }
+  .msgmap-head p { margin: 0; max-width: 640px; color: #5c6f93; line-height: 1.5; }
+  .variant { margin: 0 0 10px; font-size: 14px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #3b5a94; }
+  @media (max-width: 640px) { .wrap { padding: 0 12px; } }
+</style>
+</head>
+<body>
+  <div class="stub"><h1>Главная страница (заглушка)</h1><p>Прокрутите вниз — карта подгрузится лениво, когда блок приблизится к экрану.</p></div>
+  <div style="height: 40vh"></div>
+
+  <section class="msgmap-section">
+    <div class="wrap">
+      <div class="msgmap-head">
+        <h2>Реализованные проекты</h2>
+        <p>География поставок МСГ НАСТИЛ: от Калининграда до Красноярска и за пределами России. Нажмите на метку, чтобы увидеть объекты города.</p>
+      </div>
+      <div class="msgmap" data-msgmap data-projection="mercator" data-src="data/objects.json" data-countries="data/countries.json" data-vendor="vendor/" data-relief-tiles="data/relief/{z}/{x}/{y}.webp"></div>
+    </div>
+  </section>
+
+  <div class="stub">Остальные блоки главной страницы</div>
+  <script src="assets/msg-map.js?v=8"></script>
+</body>
+</html>
